@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>nf_core.utils &mdash; nf-core tools API 1.13.dev0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="nf_core.sync" href="sync.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> nf-core tools API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.13.dev0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../lint_tests/index.html">Lint tests</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bump_version.html">nf_core.bump_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create.html">nf_core.create</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">nf_core.download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="launch.html">nf_core.launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licences.html">nf_core.licences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lint.html">nf_core.lint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list.html">nf_core.list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html">nf_core.modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema.html">nf_core.schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sync.html">nf_core.sync</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">nf_core.utils</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">nf-core tools API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>nf_core.utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-nf_core.utils">
+<span id="nf-core-utils"></span><h1>nf_core.utils<a class="headerlink" href="#module-nf_core.utils" title="Permalink to this headline">¶</a></h1>
+<p>Common utility functions for the nf-core python package.</p>
+<dl class="py class">
+<dt id="nf_core.utils.Pipeline">
+<em class="property">class </em><code class="sig-prename descclassname">nf_core.utils.</code><code class="sig-name descname">Pipeline</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">wf_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.Pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Object to hold information about a local pipeline.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – The path to the nf-core pipeline directory.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="nf_core.utils.Pipeline.conda_config">
+<code class="sig-name descname">conda_config</code><a class="headerlink" href="#nf_core.utils.Pipeline.conda_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parsed conda configuration file content (<code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.utils.Pipeline.conda_package_info">
+<code class="sig-name descname">conda_package_info</code><a class="headerlink" href="#nf_core.utils.Pipeline.conda_package_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>The conda package(s) information, based on the API requests to Anaconda cloud.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.utils.Pipeline.nf_config">
+<code class="sig-name descname">nf_config</code><a class="headerlink" href="#nf_core.utils.Pipeline.nf_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Nextflow pipeline configuration file content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.utils.Pipeline.files">
+<code class="sig-name descname">files</code><a class="headerlink" href="#nf_core.utils.Pipeline.files" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of files found during the linting process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.utils.Pipeline.git_sha">
+<code class="sig-name descname">git_sha</code><a class="headerlink" href="#nf_core.utils.Pipeline.git_sha" title="Permalink to this definition">¶</a></dt>
+<dd><p>The git sha for the repo commit / current GitHub pull-request (<cite>$GITHUB_PR_COMMIT</cite>)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.utils.Pipeline.minNextflowVersion">
+<code class="sig-name descname">minNextflowVersion</code><a class="headerlink" href="#nf_core.utils.Pipeline.minNextflowVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum required Nextflow version to run the pipeline.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.utils.Pipeline.wf_path">
+<code class="sig-name descname">wf_path</code><a class="headerlink" href="#nf_core.utils.Pipeline.wf_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to the pipeline directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.utils.Pipeline.pipeline_name">
+<code class="sig-name descname">pipeline_name</code><a class="headerlink" href="#nf_core.utils.Pipeline.pipeline_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The pipeline name, without the <cite>nf-core</cite> tag, for example <cite>hlatyping</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.utils.Pipeline.schema_obj">
+<code class="sig-name descname">schema_obj</code><a class="headerlink" href="#nf_core.utils.Pipeline.schema_obj" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineSchema</span></code> object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.utils.Pipeline._fp">
+<code class="sig-name descname">_fp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fn</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.Pipeline._fp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience function to get full path to a file in the pipeline</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.utils.Pipeline._list_files">
+<code class="sig-name descname">_list_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.Pipeline._list_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of all files in the pipeline</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.utils.Pipeline._load">
+<code class="sig-name descname">_load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.Pipeline._load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run core load functions</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.utils.Pipeline._load_conda_environment">
+<code class="sig-name descname">_load_conda_environment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.Pipeline._load_conda_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to load the pipeline environment.yml file, if it exists</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.utils.Pipeline._load_pipeline_config">
+<code class="sig-name descname">_load_pipeline_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.Pipeline._load_pipeline_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the nextflow config for this pipeline</p>
+<p>Once loaded, set a few convienence reference class attributes</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="nf_core.utils.check_if_outdated">
+<code class="sig-prename descclassname">nf_core.utils.</code><code class="sig-name descname">check_if_outdated</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">current_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remote_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_url</span><span class="o">=</span><span class="default_value">'https://nf-co.re/tools_version'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.check_if_outdated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the current version of nf-core is outdated</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nf_core.utils.fetch_wf_config">
+<code class="sig-prename descclassname">nf_core.utils.</code><code class="sig-name descname">fetch_wf_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">wf_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.fetch_wf_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses Nextflow to retrieve the the configuration variables
+from a Nextflow workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wf_path</strong> (<em>str</em>) – Nextflow workflow file system path.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Workflow configuration settings.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nf_core.utils.poll_nfcore_web_api">
+<code class="sig-prename descclassname">nf_core.utils.</code><code class="sig-name descname">poll_nfcore_web_api</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">api_url</span></em>, <em class="sig-param"><span class="n">post_data</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.poll_nfcore_web_api" title="Permalink to this definition">¶</a></dt>
+<dd><p>Poll the nf-core website API</p>
+<p>Takes argument api_url for URL</p>
+<p>Expects API reponse to be valid JSON and contain a top-level ‘status’ key.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nf_core.utils.rich_force_colors">
+<code class="sig-prename descclassname">nf_core.utils.</code><code class="sig-name descname">rich_force_colors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.rich_force_colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if any environment variables are set to force Rich to use coloured output</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nf_core.utils.setup_requests_cachedir">
+<code class="sig-prename descclassname">nf_core.utils.</code><code class="sig-name descname">setup_requests_cachedir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.setup_requests_cachedir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up local caching for faster remote HTTP requests.</p>
+<p>Caching directory will be set up in the user’s home directory under
+a .nfcore_cache subdir.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nf_core.utils.wait_cli_function">
+<code class="sig-prename descclassname">nf_core.utils.</code><code class="sig-name descname">wait_cli_function</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">poll_func</span></em>, <em class="sig-param"><span class="n">poll_every</span><span class="o">=</span><span class="default_value">20</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.utils.wait_cli_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a command-line spinner while calling a function repeatedly.</p>
+<p>Keep waiting until that function returns True</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>poll_func</strong> (<em>function</em>) – Function to call</p></li>
+<li><p><strong>poll_every</strong> (<em>int</em>) – How many tenths of a second to wait between function calls. Default: 20.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None. Just sits in an infite loop until the function returns True.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="sync.html" class="btn btn-neutral float-left" title="nf_core.sync" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Phil Ewels, Sven Fillinger.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

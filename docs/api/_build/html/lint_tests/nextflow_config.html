@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>nextflow_config &mdash; nf-core tools API 1.13.dev0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pipeline_name_conventions" href="pipeline_name_conventions.html" />
+    <link rel="prev" title="licence" href="licence.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> nf-core tools API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.13.dev0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Lint tests</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="actions_awsfulltest.html">actions_awsfulltest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_awstest.html">actions_awstest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_branch_protection.html">actions_branch_protection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_ci.html">actions_ci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_lint.html">actions_lint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_schema_validation.html">actions_schema_validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda_dockerfile.html">conda_dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda_env_yaml.html">conda_env_yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cookiecutter_strings.html">cookiecutter_strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="files_exist.html">files_exist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licence.html">licence</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">nextflow_config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_name_conventions.html">pipeline_name_conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_todos.html">pipeline_todos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html">readme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_lint.html">schema_lint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_params.html">schema_params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version_consistency.html">version_consistency</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">nf-core tools API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Lint tests</a> &raquo;</li>
+        
+      <li>nextflow_config</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/lint_tests/nextflow_config.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nextflow-config">
+<h1>nextflow_config<a class="headerlink" href="#nextflow-config" title="Permalink to this headline">¶</a></h1>
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint.nextflow_config">
+<code class="sig-prename descclassname">PipelineLint.</code><code class="sig-name descname">nextflow_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint.nextflow_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the pipeline configuration for required variables.</p>
+<p>All nf-core pipelines are required to be configured with a minimal set of variable
+names. This test fails or throws warnings if required variables are not set.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These config variables must be set in <code class="docutils literal notranslate"><span class="pre">nextflow.config</span></code> or another config
+file imported from there. Any variables set in nextflow script files (eg. <code class="docutils literal notranslate"><span class="pre">main.nf</span></code>)
+are not checked and will be assumed to be missing.</p>
+</div>
+<p><strong>The following variables fail the test if missing:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">params.outdir</span></code>: A directory in which all pipeline results should be saved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manifest.name</span></code>: The pipeline name. Should begin with <code class="docutils literal notranslate"><span class="pre">nf-core/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manifest.description</span></code>: A description of the pipeline</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manifest.version</span></code></p>
+<ul>
+<li><p>The version of this pipeline. This should correspond to a <a class="reference external" href="https://help.github.com/articles/creating-releases/">GitHub release</a>.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">--release</span></code> is set when running <code class="docutils literal notranslate"><span class="pre">nf-core</span> <span class="pre">lint</span></code>, the version number must not contain the string <code class="docutils literal notranslate"><span class="pre">dev</span></code></p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">--release</span></code> is _not_ set, the version should end in <code class="docutils literal notranslate"><span class="pre">dev</span></code> (warning triggered if not)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manifest.nextflowVersion</span></code></p>
+<ul>
+<li><p>The minimum version of Nextflow required to run the pipeline.</p></li>
+<li><p>Should be <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> or <code class="docutils literal notranslate"><span class="pre">!&gt;=</span></code> and a version number, eg. <code class="docutils literal notranslate"><span class="pre">manifest.nextflowVersion</span> <span class="pre">=</span> <span class="pre">'&gt;=0.31.0'</span></code> (see <a class="reference external" href="https://www.nextflow.io/docs/latest/config.html#scope-manifest">Nextflow documentation</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> warns about old versions but tries to run anyway, <code class="docutils literal notranslate"><span class="pre">!&gt;=</span></code> fails for old versions. Only use the latter if you <em>know</em> that the pipeline will certainly fail before this version.</p></li>
+<li><p>This should correspond to the <code class="docutils literal notranslate"><span class="pre">NXF_VER</span></code> version tested by GitHub Actions.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manifest.homePage</span></code></p>
+<ul>
+<li><p>The homepage for the pipeline. Should be the nf-core GitHub repository URL,
+so beginning with <code class="docutils literal notranslate"><span class="pre">https://github.com/nf-core/</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeline.enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">trace.enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">report.enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">dag.enabled</span></code></p>
+<ul>
+<li><p>The nextflow timeline, trace, report and DAG should be enabled by default (set to <code class="docutils literal notranslate"><span class="pre">true</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">process.cpus</span></code>, <code class="docutils literal notranslate"><span class="pre">process.memory</span></code>, <code class="docutils literal notranslate"><span class="pre">process.time</span></code></p>
+<ul>
+<li><p>Default CPUs, memory and time limits for tasks</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">params.input</span></code></p>
+<ul>
+<li><p>Input parameter to specify input data, specify this to avoid a warning</p></li>
+<li><p>Typical usage:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">params.input</span></code>: Input data that is not NGS sequencing data</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>The following variables throw warnings if missing:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manifest.mainScript</span></code>: The filename of the main pipeline script (should be <code class="docutils literal notranslate"><span class="pre">main.nf</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeline.file</span></code>, <code class="docutils literal notranslate"><span class="pre">trace.file</span></code>, <code class="docutils literal notranslate"><span class="pre">report.file</span></code>, <code class="docutils literal notranslate"><span class="pre">dag.file</span></code></p>
+<ul>
+<li><p>Default filenames for the timeline, trace and report</p></li>
+<li><p>The DAG file path should end with <code class="docutils literal notranslate"><span class="pre">.svg</span></code> (If Graphviz is not installed, Nextflow will generate a <code class="docutils literal notranslate"><span class="pre">.dot</span></code> file instead)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">process.container</span></code></p>
+<ul>
+<li><p>Docker Hub handle for a single default container for use by all processes.</p></li>
+<li><p>Must specify a tag that matches the pipeline version number if set.</p></li>
+<li><p>If the pipeline version number contains the string <code class="docutils literal notranslate"><span class="pre">dev</span></code>, the DockerHub tag must be <code class="docutils literal notranslate"><span class="pre">:dev</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>The following variables are depreciated and fail the test if they are still present:</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">params.version</span></code>: The old method for specifying the pipeline version. Replaced by <code class="docutils literal notranslate"><span class="pre">manifest.version</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">params.nf_required_version</span></code>: The old method for specifying the minimum Nextflow version. Replaced by <code class="docutils literal notranslate"><span class="pre">manifest.nextflowVersion</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">params.container</span></code>: The old method for specifying the dockerhub container address. Replaced by <code class="docutils literal notranslate"><span class="pre">process.container</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">igenomesIgnore</span></code>: Changed to <code class="docutils literal notranslate"><span class="pre">igenomes_ignore</span></code></p>
+<blockquote>
+<div><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> convention should now be used when defining pipeline parameters</p>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>The following Nextflow syntax is depreciated and fails the test if present:</strong></p>
+<ul class="simple">
+<li><p>Process-level configuration syntax still using the old Nextflow syntax, for example: <code class="docutils literal notranslate"><span class="pre">process.$fastqc</span></code> instead of <code class="docutils literal notranslate"><span class="pre">process</span> <span class="pre">withName:'fastqc'</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pipeline_name_conventions.html" class="btn btn-neutral float-right" title="pipeline_name_conventions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="licence.html" class="btn btn-neutral float-left" title="licence" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Phil Ewels, Sven Fillinger.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>schema_lint &mdash; nf-core tools API 1.13.dev0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="schema_params" href="schema_params.html" />
+    <link rel="prev" title="readme" href="readme.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> nf-core tools API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.13.dev0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Lint tests</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="actions_awsfulltest.html">actions_awsfulltest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_awstest.html">actions_awstest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_branch_protection.html">actions_branch_protection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_ci.html">actions_ci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_lint.html">actions_lint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_schema_validation.html">actions_schema_validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda_dockerfile.html">conda_dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda_env_yaml.html">conda_env_yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cookiecutter_strings.html">cookiecutter_strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="files_exist.html">files_exist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licence.html">licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nextflow_config.html">nextflow_config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_name_conventions.html">pipeline_name_conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_todos.html">pipeline_todos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html">readme</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">schema_lint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_params.html">schema_params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version_consistency.html">version_consistency</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">nf-core tools API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Lint tests</a> &raquo;</li>
+        
+      <li>schema_lint</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/lint_tests/schema_lint.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="schema-lint">
+<h1>schema_lint<a class="headerlink" href="#schema-lint" title="Permalink to this headline">¶</a></h1>
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint.schema_lint">
+<code class="sig-prename descclassname">PipelineLint.</code><code class="sig-name descname">schema_lint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint.schema_lint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pipeline schema syntax</p>
+<p>Pipelines should have a <code class="docutils literal notranslate"><span class="pre">nextflow_schema.json</span></code> file that describes the different
+pipeline parameters (eg. <code class="docutils literal notranslate"><span class="pre">params.something</span></code>, <code class="docutils literal notranslate"><span class="pre">--something</span></code>).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Reminder: you should generally never need to edit this JSON file by hand.
+The <code class="docutils literal notranslate"><span class="pre">nf-core</span> <span class="pre">schema</span> <span class="pre">build</span></code> command can create <em>and edit</em> the file for you
+to keep it up to date, with a friendly user-interface for customisation.</p>
+</div>
+<p>The lint test checks the schema for the following:</p>
+<ul>
+<li><p>Schema should be a valid JSON file</p></li>
+<li><p>Schema should adhere to <a class="reference external" href="https://json-schema.org/">JSONSchema</a>, Draft 7.</p></li>
+<li><p>Parameters can be described in two places:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>As <code class="docutils literal notranslate"><span class="pre">properties</span></code> in the top-level schema object</p></li>
+<li><p>As <code class="docutils literal notranslate"><span class="pre">properties</span></code> within subschemas listed in a top-level <code class="docutils literal notranslate"><span class="pre">definitions</span></code> objects</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The schema must describe at least one parameter</p></li>
+<li><p>There must be no duplicate parameter IDs across the schema and definition subschema</p></li>
+<li><p>All subschema in <code class="docutils literal notranslate"><span class="pre">definitions</span></code> must be referenced in the top-level <code class="docutils literal notranslate"><span class="pre">allOf</span></code> key</p></li>
+<li><p>The top-level <code class="docutils literal notranslate"><span class="pre">allOf</span></code> key must not describe any non-existent definitions</p></li>
+<li><p>Default parameters in the schema must be valid</p></li>
+<li><p>Core top-level schema attributes should exist and be set as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$schema</span></code>: <code class="docutils literal notranslate"><span class="pre">https://json-schema.org/draft-07/schema</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$id</span></code>: URL to the raw schema file, eg. <code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/YOURPIPELINE/master/nextflow_schema.json</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: <code class="docutils literal notranslate"><span class="pre">YOURPIPELINE</span> <span class="pre">pipeline</span> <span class="pre">parameters</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: The pipeline config <code class="docutils literal notranslate"><span class="pre">manifest.description</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>For example, an <em>extremely</em> minimal schema could look like this:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://json-schema.org/draft-07/schema&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;$id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/YOURPIPELINE/master/nextflow_schema.json&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;YOURPIPELINE pipeline parameters&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This pipeline is for testing&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;first_param&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span> <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;my_first_group&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;second_param&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span> <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;allOf&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/my_first_group&quot;</span><span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can check your pipeline schema without having to run the entire pipeline lint
+by running <code class="docutils literal notranslate"><span class="pre">nf-core</span> <span class="pre">schema</span> <span class="pre">lint</span></code> instead of <code class="docutils literal notranslate"><span class="pre">nf-core</span> <span class="pre">lint</span></code></p>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="schema_params.html" class="btn btn-neutral float-right" title="schema_params" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="readme.html" class="btn btn-neutral float-left" title="readme" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Phil Ewels, Sven Fillinger.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

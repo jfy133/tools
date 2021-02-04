@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>nf_core.lint &mdash; nf-core tools API 1.13.dev0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="nf_core.list" href="list.html" />
+    <link rel="prev" title="nf_core.licences" href="licences.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> nf-core tools API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.13.dev0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../lint_tests/index.html">Lint tests</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bump_version.html">nf_core.bump_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create.html">nf_core.create</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">nf_core.download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="launch.html">nf_core.launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licences.html">nf_core.licences</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">nf_core.lint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list.html">nf_core.list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html">nf_core.modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema.html">nf_core.schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sync.html">nf_core.sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">nf_core.utils</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">nf-core tools API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>nf_core.lint</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/lint.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nf-core-lint">
+<h1>nf_core.lint<a class="headerlink" href="#nf-core-lint" title="Permalink to this headline">¶</a></h1>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See the <a class="reference external" href="../lint_tests/index.html">Lint Tests</a> docs for information about specific linting functions.</p>
+</div>
+<span class="target" id="module-nf_core.lint"></span><p>Linting policy for nf-core pipeline projects.</p>
+<p>Tests Nextflow-based pipelines to check that they adhere to
+the nf-core community guidelines.</p>
+<dl class="py function">
+<dt id="nf_core.lint.run_linting">
+<code class="sig-prename descclassname">nf_core.lint.</code><code class="sig-name descname">run_linting</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pipeline_dir</span></em>, <em class="sig-param"><span class="n">release_mode</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">show_passed</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">md_fn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">json_fn</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.run_linting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs all nf-core linting checks on a given Nextflow pipeline project
+in either <cite>release</cite> mode or <cite>normal</cite> mode (default). Returns an object
+of type <a class="reference internal" href="#nf_core.lint.PipelineLint" title="nf_core.lint.PipelineLint"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineLint</span></code></a> after finished.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pipeline_dir</strong> (<em>str</em>) – The path to the Nextflow pipeline root directory</p></li>
+<li><p><strong>release_mode</strong> (<em>bool</em>) – Set this to <cite>True</cite>, if the linting should be run in the <cite>release</cite> mode.
+See <a class="reference internal" href="#nf_core.lint.PipelineLint" title="nf_core.lint.PipelineLint"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineLint</span></code></a> for more information.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An object of type <a class="reference internal" href="#nf_core.lint.PipelineLint" title="nf_core.lint.PipelineLint"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineLint</span></code></a> that contains all the linting results.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="nf_core.lint.PipelineLint">
+<em class="property">class </em><code class="sig-prename descclassname">nf_core.lint.</code><code class="sig-name descname">PipelineLint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">wf_path</span></em>, <em class="sig-param"><span class="n">release_mode</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="utils.html#nf_core.utils.Pipeline" title="nf_core.utils.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">nf_core.utils.Pipeline</span></code></a></p>
+<p>Object to hold linting information and results.</p>
+<p>Inherits <a class="reference internal" href="utils.html#nf_core.utils.Pipeline" title="nf_core.utils.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">nf_core.utils.Pipeline</span></code></a> class.</p>
+<p>Use the <a class="reference internal" href="#nf_core.lint.PipelineLint._lint_pipeline" title="nf_core.lint.PipelineLint._lint_pipeline"><code class="xref py py-func docutils literal notranslate"><span class="pre">PipelineLint._lint_pipeline()</span></code></a> function to run lint tests.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – The path to the nf-core pipeline directory.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="nf_core.lint.PipelineLint.failed">
+<code class="sig-name descname">failed</code><a class="headerlink" href="#nf_core.lint.PipelineLint.failed" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tuples of the form: <code class="docutils literal notranslate"><span class="pre">(&lt;test-name&gt;,</span> <span class="pre">&lt;reason&gt;)</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.lint.PipelineLint.ignored">
+<code class="sig-name descname">ignored</code><a class="headerlink" href="#nf_core.lint.PipelineLint.ignored" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tuples of the form: <code class="docutils literal notranslate"><span class="pre">(&lt;test-name&gt;,</span> <span class="pre">&lt;reason&gt;)</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.lint.PipelineLint.lint_config">
+<code class="sig-name descname">lint_config</code><a class="headerlink" href="#nf_core.lint.PipelineLint.lint_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parsed nf-core linting config for this pipeline</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.lint.PipelineLint.passed">
+<code class="sig-name descname">passed</code><a class="headerlink" href="#nf_core.lint.PipelineLint.passed" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tuples of the form: <code class="docutils literal notranslate"><span class="pre">(&lt;test-name&gt;,</span> <span class="pre">&lt;reason&gt;)</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.lint.PipelineLint.release_mode">
+<code class="sig-name descname">release_mode</code><a class="headerlink" href="#nf_core.lint.PipelineLint.release_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p><cite>True</cite>, if you the to linting was run in release mode, <cite>False</cite> else.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="nf_core.lint.PipelineLint.warned">
+<code class="sig-name descname">warned</code><a class="headerlink" href="#nf_core.lint.PipelineLint.warned" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tuples of the form: <code class="docutils literal notranslate"><span class="pre">(&lt;warned</span> <span class="pre">no&gt;,</span> <span class="pre">&lt;reason&gt;)</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint._get_results_md">
+<code class="sig-name descname">_get_results_md</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint._get_results_md" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a markdown file suitable for posting in a GitHub comment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Formatting markdown content</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>markdown (str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint._lint_pipeline">
+<code class="sig-name descname">_lint_pipeline</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint._lint_pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main linting function.</p>
+<p>Takes the pipeline directory as the primary input and iterates through
+the different linting checks in order. Collects any warnings or errors
+into object attributes: <code class="docutils literal notranslate"><span class="pre">passed</span></code>, <code class="docutils literal notranslate"><span class="pre">ignored</span></code>, <code class="docutils literal notranslate"><span class="pre">warned</span></code> and <code class="docutils literal notranslate"><span class="pre">failed</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint._print_results">
+<code class="sig-name descname">_print_results</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">show_passed</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint._print_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print linting results to the command line.</p>
+<p>Uses the <code class="docutils literal notranslate"><span class="pre">rich</span></code> library to print a set of formatted tables to the command line
+summarising the linting results.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint._save_json_results">
+<code class="sig-name descname">_save_json_results</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">json_fn</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint._save_json_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to dump lint results to a JSON file for downstream use</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>json_fn</strong> (<em>str</em>) – File path to write JSON to.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint._strip_ansi_codes">
+<code class="sig-name descname">_strip_ansi_codes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">string</span></em>, <em class="sig-param"><span class="n">replace_with</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint._strip_ansi_codes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Strip ANSI colouring codes from a string to return plain text.</p>
+<p>Solution found on Stack Overflow: <a class="reference external" href="https://stackoverflow.com/a/14693789/713980">https://stackoverflow.com/a/14693789/713980</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint._wrap_quotes">
+<code class="sig-name descname">_wrap_quotes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">files</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint._wrap_quotes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function to take a list of filenames and format with markdown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>files</strong> (<em>list</em>) – <p>List of filenames, eg:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>Formatted string of paths separated by word <code class="docutils literal notranslate"><span class="pre">or</span></code>, eg:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`foo` or bar` or `baz`
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>markdown (str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="list.html" class="btn btn-neutral float-right" title="nf_core.list" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="licences.html" class="btn btn-neutral float-left" title="nf_core.licences" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Phil Ewels, Sven Fillinger.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

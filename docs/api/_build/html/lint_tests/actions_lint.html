@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>actions_lint &mdash; nf-core tools API 1.13.dev0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="actions_schema_validation" href="actions_schema_validation.html" />
+    <link rel="prev" title="actions_ci" href="actions_ci.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> nf-core tools API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.13.dev0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Lint tests</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="actions_awsfulltest.html">actions_awsfulltest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_awstest.html">actions_awstest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_branch_protection.html">actions_branch_protection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_ci.html">actions_ci</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">actions_lint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_schema_validation.html">actions_schema_validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda_dockerfile.html">conda_dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda_env_yaml.html">conda_env_yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cookiecutter_strings.html">cookiecutter_strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="files_exist.html">files_exist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licence.html">licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nextflow_config.html">nextflow_config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_name_conventions.html">pipeline_name_conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_todos.html">pipeline_todos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html">readme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_lint.html">schema_lint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_params.html">schema_params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version_consistency.html">version_consistency</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">nf-core tools API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Lint tests</a> &raquo;</li>
+        
+      <li>actions_lint</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/lint_tests/actions_lint.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="actions-lint">
+<h1>actions_lint<a class="headerlink" href="#actions-lint" title="Permalink to this headline">¶</a></h1>
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint.actions_lint">
+<code class="sig-prename descclassname">PipelineLint.</code><code class="sig-name descname">actions_lint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint.actions_lint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks that the GitHub Actions <em>linting</em> workflow is valid.</p>
+<p>This linting test checks that the GitHub Actions <code class="docutils literal notranslate"><span class="pre">.github/workflows/linting.yml</span></code> workflow
+correctly runs the <code class="docutils literal notranslate"><span class="pre">nf-core</span> <span class="pre">lint</span></code>, <code class="docutils literal notranslate"><span class="pre">markdownlint</span></code> and <code class="docutils literal notranslate"><span class="pre">yamllint</span></code> commands.
+These three commands all check code syntax and code-style.
+Yes that’s right - this is a lint test that checks that lint tests are running. Meta.</p>
+<p>This lint test checks this GitHub Actions workflow file for the following:</p>
+<ul>
+<li><p>That the workflow is triggered on the  <code class="docutils literal notranslate"><span class="pre">push</span></code> and <code class="docutils literal notranslate"><span class="pre">pull_request</span></code> events, eg:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">on</span><span class="p">:</span>
+    <span class="nt">push</span><span class="p">:</span>
+    <span class="nt">pull_request</span><span class="p">:</span>
+</pre></div>
+</div>
+</li>
+<li><p>That the workflow has a step that runs <code class="docutils literal notranslate"><span class="pre">nf-core</span> <span class="pre">lint</span></code>, eg:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">nf-core</span><span class="p">:</span>
+    <span class="nt">steps</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nf-core -l lint_log.txt lint ${GITHUB_WORKSPACE} --markdown lint_results.md</span>
+</pre></div>
+</div>
+</li>
+<li><p>That the workflow has a step that runs <code class="docutils literal notranslate"><span class="pre">markdownlint</span></code>, eg:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">Markdown</span><span class="p">:</span>
+    <span class="nt">steps</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">markdownlint ${GITHUB_WORKSPACE} -c ${GITHUB_WORKSPACE}/.github/markdownlint.yml</span>
+</pre></div>
+</div>
+</li>
+<li><p>That the workflow has a step that runs <code class="docutils literal notranslate"><span class="pre">yamllint</span></code>, eg:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">YAML</span><span class="p">:</span>
+    <span class="nt">steps</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">yamllint $(find ${GITHUB_WORKSPACE} -type f -name &quot;*.yml&quot;)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These are minimal examples of the commands and YAML structure and are not complete
+enough to be copied into the workflow file.</p>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="actions_schema_validation.html" class="btn btn-neutral float-right" title="actions_schema_validation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="actions_ci.html" class="btn btn-neutral float-left" title="actions_ci" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Phil Ewels, Sven Fillinger.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

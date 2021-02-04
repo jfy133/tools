@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>conda_env_yaml &mdash; nf-core tools API 1.13.dev0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cookiecutter_strings" href="cookiecutter_strings.html" />
+    <link rel="prev" title="conda_dockerfile" href="conda_dockerfile.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> nf-core tools API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.13.dev0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Lint tests</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="actions_awsfulltest.html">actions_awsfulltest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_awstest.html">actions_awstest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_branch_protection.html">actions_branch_protection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_ci.html">actions_ci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_lint.html">actions_lint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions_schema_validation.html">actions_schema_validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda_dockerfile.html">conda_dockerfile</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">conda_env_yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cookiecutter_strings.html">cookiecutter_strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="files_exist.html">files_exist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licence.html">licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nextflow_config.html">nextflow_config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_name_conventions.html">pipeline_name_conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_todos.html">pipeline_todos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html">readme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_lint.html">schema_lint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema_params.html">schema_params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version_consistency.html">version_consistency</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">nf-core tools API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Lint tests</a> &raquo;</li>
+        
+      <li>conda_env_yaml</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/lint_tests/conda_env_yaml.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="conda-env-yaml">
+<h1>conda_env_yaml<a class="headerlink" href="#conda-env-yaml" title="Permalink to this headline">¶</a></h1>
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint.conda_env_yaml">
+<code class="sig-prename descclassname">PipelineLint.</code><code class="sig-name descname">conda_env_yaml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint.conda_env_yaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks that the conda environment file is valid.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This test is ignored if there is not an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>
+file present in the pipeline root directory.</p>
+</div>
+<p>DSL1 nf-core pipelines use a single Conda environment to manage all software
+dependencies for a workflow. This can be used directly with <code class="docutils literal notranslate"><span class="pre">-profile</span> <span class="pre">conda</span></code>
+and is also used in the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> to build a docker image.</p>
+<p>This test checks the conda <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file to ensure that it follows nf-core guidelines.
+Each dependency is checked using the <a class="reference external" href="https://api.anaconda.org/docs">Anaconda API service</a>.
+Dependency sublists are ignored with the exception of <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">pip</span></code>: these packages are also checked
+for pinned version numbers and checked using the <a class="reference external" href="https://wiki.python.org/moin/PyPIJSON">PyPI JSON API</a>.</p>
+<p>Specifically, this lint test makes sure that:</p>
+<ul>
+<li><p>The environment <code class="docutils literal notranslate"><span class="pre">name</span></code> must match the pipeline name and version</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The pipeline name is defined in the config variable <code class="docutils literal notranslate"><span class="pre">manifest.name</span></code></p></li>
+<li><p>Replace the slash with a hyphen as environment names shouldn’t contain that character</p></li>
+<li><p>Example: For <code class="docutils literal notranslate"><span class="pre">nf-core/test</span></code> version 1.4, the conda environment name should be <code class="docutils literal notranslate"><span class="pre">nf-core-test-1.4</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>All package dependencies have a specific version number pinned</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Remember that Conda package versions should be pinned with one equals sign (<code class="docutils literal notranslate"><span class="pre">toolname=1.1</span></code>),
+but pip uses two (<code class="docutils literal notranslate"><span class="pre">toolname==1.2</span></code>)</p>
+</div>
+</div></blockquote>
+</li>
+<li><p>That package versions can be found and are the latest available</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Test will go through all conda channels listed in the file, or check PyPI if <code class="docutils literal notranslate"><span class="pre">pip</span></code></p></li>
+<li><p>Conda dependencies with pinned channels (eg. <code class="docutils literal notranslate"><span class="pre">conda-forge::openjdk</span></code>) are ok too</p></li>
+<li><p>In addition to the package name, the pinned version is checked</p></li>
+<li><p>If a newer version is available, a warning will be reported</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint._anaconda_package">
+<code class="sig-prename descclassname">PipelineLint.</code><code class="sig-name descname">_anaconda_package</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dep</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint._anaconda_package" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query conda package information.</p>
+<p>Sends a HTTP GET request to the Anaconda remote API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dep</strong> (<em>str</em>) – A conda package name.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>A LookupError</strong><strong>, </strong><strong>if the connection fails</strong><strong> or </strong><strong>times out</strong><strong> or </strong><strong>gives an unexpected status code</strong> – </p></li>
+<li><p><strong>A ValueError</strong><strong>, </strong><strong>if the package name can not be found</strong><strong> (</strong><strong>404</strong><strong>)</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nf_core.lint.PipelineLint._pip_package">
+<code class="sig-prename descclassname">PipelineLint.</code><code class="sig-name descname">_pip_package</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.lint.PipelineLint._pip_package" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query PyPi package information.</p>
+<p>Sends a HTTP GET request to the PyPi remote API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dep</strong> (<em>str</em>) – A PyPi package name.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>A LookupError</strong><strong>, </strong><strong>if the connection fails</strong><strong> or </strong><strong>times out</strong> – </p></li>
+<li><p><strong>A ValueError</strong><strong>, </strong><strong>if the package name can not be found</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cookiecutter_strings.html" class="btn btn-neutral float-right" title="cookiecutter_strings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="conda_dockerfile.html" class="btn btn-neutral float-left" title="conda_dockerfile" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Phil Ewels, Sven Fillinger.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
